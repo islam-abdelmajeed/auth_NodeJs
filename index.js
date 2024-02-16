@@ -23,6 +23,7 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/root"));
 app.use("/auth", require("./routes/authRoutes"));
+app.use("/user", require("./routes/userRoutes"));
 
 //if user enter route not exist
 app.all("*",(req, res, next)=>{
